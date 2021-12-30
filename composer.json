@@ -1,0 +1,23 @@
+{
+    "name": "daniwebdev/php-api-gateway",
+    "version": "0.0.1",
+    "authors": [{
+        "name": "Dani",
+        "email": "dani.webdev@gmail.com"
+    }],
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "PhpGateway\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "require": {
+        "guzzlehttp/guzzle": "^7.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    }
+}

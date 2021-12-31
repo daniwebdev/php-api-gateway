@@ -60,7 +60,7 @@ class Gateway {
         $services = config('services');
 
         if($services == null) {
-            throw new Exception('No services found in config/services.php');
+            throw new Exception('No services found in config/services.php', 404);
         } else {
             return $services;
         }

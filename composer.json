@@ -1,6 +1,7 @@
 {
     "name": "daniwebdev/php-api-gateway",
     "version": "0.0.1",
+    "description": "PHP API Gateway build with PHP",
     "authors": [{
         "name": "Dani",
         "email": "dani.webdev@gmail.com"

@@ -35,16 +35,16 @@ class GatewayExecute extends Gateway
             $query_string = $this->get_query_string();
             $request_path = $this->get_request_path();
 
+            foreach($this->middlewares as $middleware) {
+                $middleware(headers: $headers);
+            }
+            
             if ($request_path == '/') {
                 return $this->response($this->default_response);
             }
             
             $service       = $this->get_service();
-
-            foreach($this->middlewares as $middleware) {
-                $middleware(headers: $headers);
-            }
-
+    
             $request_endpoint_path = $service['endpoint'] . $this->request_endpoint_path();
 
             $client = new \GuzzleHttp\Client(['verify' => false]);
